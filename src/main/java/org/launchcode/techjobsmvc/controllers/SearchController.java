@@ -37,6 +37,7 @@ public String displaySearchResults(Model model, @RequestParam String searchType,
 //conditional statement that checks if the search type is all or not
     if (searchTerm.equals("") || searchTerm.equals("all")) {
         jobs = JobData.findAll();
+//        adding them to the model
         model.addAttribute("jobs", jobs);
         model.addAttribute("columns", columnChoices);;
     } else {
